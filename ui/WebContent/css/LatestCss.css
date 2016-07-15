@@ -1,0 +1,109 @@
+@CHARSET "ISO-8859-1";
+
+.contactRow
+{
+float: left; 
+width: 940px; 
+background: #f0f0f0; 
+border-bottom: 14px solid #fff; 
+padding: 22px 0 0;
+}
+.question
+{
+	float: left; 
+	width: 380px; 
+	padding: 0 20px; 
+}
+.contactRow h3
+{
+	font-size: 112.5%; 
+	font-weight: normal; 
+	line-height: 24px; 
+	padding: 0 0 6px;
+}
+.vaentry {
+
+width: 50px; 
+height: 55px; 
+font-family: Arial,Helvetica,sans-serif; 
+font-size: 11px;
+}
+
+
+#btnAsk
+{
+	margin-top:7px;
+}
+
+#oliviaavatar {
+
+position: absolute; 
+bottom: 0; 
+right: 0;
+} 
+
+#valaunchformArea {
+
+position: relative; 
+width: 380px; 
+min-height: 188px; 
+height: auto !important; 
+height: 188px; 
+text-align: left; 
+padding: 0;
+
+} 
+.contactRow.inner.column {
+float: left; 
+width: 220px; 
+background: none; 
+padding: 0 18px 0 22px;
+
+} 
+ p.smallPhone {
+
+line-height: 18px; 
+font-size: 75%; 
+color: #000; 
+padding: 0;
+
+} 
+p.phone span {
+
+font-weight: normal; 
+font-size: 171.43%; 
+line-height: 30px;
+
+} 
+
+#msgArea {
+width: 300px;
+height: 70px;
+margin: 6px;
+border: 1;
+border-width: 1px;
+color: #000000;
+background-color: white;
+margin-bottom: 10px;
+overflow-y: auto;
+overflow-x: hidden;
+resize: none;
+border-color: black; 
+} 
+
+.contactRow inner
+{
+	float:left;
+	width:520px;
+	padding:0px;
+	border-bottom:6px solid #f0f0f0;
+	background:url("../images/uk-content/contactRow.gif") left top repeat-y;
+} 
+
+
+
+ 
+
+
+
+

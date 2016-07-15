@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Bootstrap Example</title>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/MainController.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/NewFile.css">
+<style>
+div#myNavbar {
+	background-color: #B7BEC5;
+	width: 700px;
+	height: 60px !important;
+}
+</style>
+</head>
+<body  ng-app="ChatApp">
+
+
+	<div id="myNavbar" class="topbar">
+
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#"> <img
+				src="./images/LMS logo new web.jpg" alt="" height="40px">
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="./images/LMS India User Guide.pdf"><font
+						color="white">User Manual</font></a></li>
+
+				<li><a href="./images/Help.pdf"><font color="white">Contact</font></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div>
+		<table class="table table-bordered"  ng-controller="postController">
+
+			<tr>
+
+
+				<td align="left" valign="top" rowspan="2" width="250px"
+					height="300px"><img src="./images/agent1.png"
+					class=" img-responsive " alt="" height="150" width="150"> <br>
+
+					<div>
+						<h5>
+							<b>Frequently asked questions</b>
+						</h5>
+					</div>
+					<div
+						style="overflow-y: scroll; height: 100px; width: 90%; border-color: black;"
+						style="overflow-x: scroll; height:90%; width:100px;">
+						<div id="section1" class="container-fluid">
+
+
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>What is the change
+										in carry forward of leaves in the new Leave Policy starting
+										January 1 2016?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>What is the
+										rationale behind this change?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>What are
+										accumulated leaves?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>Where can one check
+										the leave balance?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>What is the
+										rationale behind this change?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>What are
+										accumulated leaves?</a>
+								</p></li>
+							<li><p>
+									<a href="./images/LMS FAQ.pdf" download>Where can one check
+										the leave balance?</a>
+								</p></li>
+
+						</div>
+
+					</div></td>
+				<td width="350px">
+					<div id="scroller"style="overflow-y: scroll; height: 180px; width: 100%;"style="overflow-x: scroll; height:100%; width:100px;">
+								
+								
+								<div class="panel-body msg_container_base">
+                 <div>
+                 <input type="hidden" id="client_id" value="client_id" ng-model="client_id">
+                 <input type="hidden" id="conversationID" value="conversationID" ng-model="conversationID">
+                 <div class="row msg_container base_receive" >
+                       
+                        <div class="col-md-10 col-xs-10">
+                            <div id="recieve" class="messages msg_receive">
+                              {{messageDefault}}
+                            </div>
+                        </div>
+                         <div class="col-md-2 col-xs-2 avatar" ng-show="image1">
+                        
+                            <img src="./images/agent1.png" alt="img1" class=" img-responsive ">
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <div>
+                    <div  ng-repeat="message in messages track by $index">
+                    <div class="row msg_container base_sent">
+                     <div class="col-md-2 col-xs-2 avatar" ng-show="image2">
+                        
+                            <img src="./images/agent1.png" alt="img1" class=" img-responsive">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div id="sent" class="messages msg_sent">
+                             {{message.key}}
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="row msg_container base_receive">
+                        
+                        <div class="col-md-10 col-xs-10">
+                            <div id="recieve" class="messages msg_receive">
+                               {{message.value}}
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar" ng-show="image3">
+                       
+                            <img src="./images/agent1.png" alt="img1" class=" img-responsive ">
+                        </div>
+                    </div>
+                  </div>
+                  <div ng-show="load">
+                    <img id="loadIMG" src="./images/load.gif" alt="Waiting..." style="width:30px;height:30px;"align="middle">
+                    </div>
+                  </div>
+                  </div>
+						
+								</div>
+								<br> <br> 
+								
+								<div style="float: left">
+									<textarea class="form-control vresize" id="encJs"
+										style="margin-top: 0px; margin-bottom: 0px; height: 60px; width: 260px;" ng-model="messageBody" ng-keypress="checkIfEnterKeyWasPressed($event)"></textarea>
+								</div>
+
+
+
+								<div style="float: right">
+
+
+									<input type="image" id="btn" src="./images/AskImage.jpg"
+										class=" img-rounded " align="right" alt="" width="90"
+										height="60" ng-click="sendPost()">
+								</div>
+				</td>
+			</tr>
+
+
+		</table>
+	</div>
+</body>
+</html>
+

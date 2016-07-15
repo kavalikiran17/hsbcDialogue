@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+.table
+{
+	table-layout:fixed;
+	width: 700px;
+	height:300px;
+}
+#section1 {
+	padding-top: 10px;
+	height: 1000px;
+	color: black;
+	background-color: #E5E8EB;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+textarea {
+  min-height:60px;
+  width:200px;
+ 
+  
+}
+
+.vresize {
+  resize: vertical; 
+   min-width:100px;
+   max-width:290px;
+}
+ 
