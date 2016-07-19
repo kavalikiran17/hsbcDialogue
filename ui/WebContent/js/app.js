@@ -2,4 +2,4 @@
  * 
  */
 
-var app=angular.module("ChatApp",[]);
+angular.module('ChatApp',[]);
